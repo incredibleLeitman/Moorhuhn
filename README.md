@@ -1,51 +1,10 @@
 # Moorhuhn
-Moorhuhn remake in UE4, students project for @fh-technikum-wien
+Moorhuhn remake in UE4, students project for @fh-technikum-wien in GEE (game engine based development)
+
+![Moorhuhn Remake Title](https://github.com/incredibleLeitman/Moorhuhn/blob/main/screenshot.png "Moorhuhn Remake Title")
 
 
-
-
-## Done
-
-- basic menue
-- sceen shake
-- basic ammo system and reload
-- timer
-- score system
-- actual moving enemies
-- spawner and behavior
-- stop / remove game(mode)/map? to prevent further EventTicks? --> set bool @finish -> load level resets state
-- music and sound
-    - menue button
-    - bg music
-    - countdown
-    - hit + death scream
-- sort highscores and mark last game (TODO: fix ListView addItem)
-- level mesh
-
-
-## improvements
-
-- "correctly" close map and open score entry
-- enter name after play (currently random playertag)
-- add random encounter for more points
-- animate shoot and reload system by showing cells
-- disintegration particle system at hit
-- pause menue?
-- use of nice enemy assets:
-    - add custom models and animation for Moorhuhn and/or crazy chicken
-    - rng cock for extra points
-    - scarecrow for some more extra points
-    - classic windmill?
-    - castle
-
-
-## WTF? why is this shit not workin?
-- Highscores: AddListViewItem; seems to add elements, get oer methodm using space, but does not show (maybe invisible or wrong z-order?)
-- setting values for game mode (GameRunning): allowed, gets called, but does not change the value? (maybe a reset or another instance?)
-- Lightning seems to do anything but behaving correctly as set
-
-
-## Fullfilled requirements and Features
+## Fullfilled requirements and features
 
 - User-controllable character
     standard FPS character, WASD movement + space to jump, mouse controlled crosshair: left click to shoot, right click to reload
@@ -67,12 +26,12 @@ Moorhuhn remake in UE4, students project for @fh-technikum-wien
     - because animation for custom Moorhuhn didn't work, walking animation for starter package Mannequin was used
 
 - Used external content
-    - Particle system for muzzle flash from Sci-fi Gun Pack by Quaternius
-    - Particle system for explosions at enemy hit from UE4 infiltrator Demo
+    - Particle system for muzzle flash from Sci-fi Gun Pack by Quaternius (https://www.patreon.com/posts/free-sci-fi-gun-18871201)
+    - Particle system for explosions at enemy hit from UE4 infiltrator Demo (https://www.unrealengine.com/marketplace/en-US/product/infiltrator-demo)
     - Environment such as mountains, plateaus, trees and billboards from UE4 infiltrator demo
     - Moorhuhn created by Marlene (https://twitter.com/Merlar98)
     - Crazy chicken created by Jorge Rodrigues (https://www.artstation.com/artwork/4bdZz8)
-    - sounds and music mostly from original moorhuhn game (https://store.steampowered.com/app/340120/Moorhuhn_Crazy_Chicken/?l=german)
+    - sounds and music mostly from original moorhuhn game (https://store.steampowered.com/app/340120/Moorhuhn_Crazy_Chicken)
         additional sounds from weloveindies.com using student licence
     - Moorhuhn remastered menue background image
 
@@ -103,11 +62,11 @@ Moorhuhn remake in UE4, students project for @fh-technikum-wien
 - references
     - assets stores
         - http://shootertutorial.com/assets-stores-links/
-        - https://www.cgtrader.com/
     - animation creator from meshes
         - https://www.mixamo.com/#/
         - retarget Mixamo animation to UE4 https://www.youtube.com/watch?v=UoGdTouVeRs&ab_channel=CARD00R
-    - Godot Moorhuhn clone implementation https://talesfromimdahl.de/2019/04/04/how-to-part-2/
+    - Godot Moorhuhn clone implementation
+        - https://talesfromimdahl.de/2019/04/04/how-to-part-2/
     - Disintegration effect
         - https://www.youtube.com/watch?v=gldIJGqlWf0&ab_channel=UnrealCG
         - https://www.youtube.com/watch?v=D4bXMDFPcWQ&ab_channel=UnrealCG
@@ -165,3 +124,48 @@ For a good mark you need to create your own content!
 Also note that external plugins (incl. plugins from the UE4 marketplace) as well as VR games are not allowed!
 
 A technical documentation that fully describes which of the aforementioned topics have been implemented and in which way, including a summary and overview on the whole project, is mandatory. This documentation has to describe where / in which assets in your project the requirements listed above can be found, and how you have implemented them. Without such a documentation your project won't be marked = fail!
+
+
+
+## Done
+
+- basic menue
+- sceen shake
+- basic ammo system and reload
+- timer
+- score system
+- actual moving enemies
+- spawner and behavior
+- stop / remove game(mode)/map? to prevent further EventTicks? --> set bool @finish -> load level resets state
+- music and sound
+    - menue button
+    - bg music
+    - countdown
+    - hit + death scream
+- sort highscores and mark last game (TODO: fix ListView addItem)
+- level mesh
+
+
+## improvements
+
+- "correctly" close map and open score entry
+- enter name after play (currently random playertag)
+- add random encounter for more points
+- animate shoot and reload system by showing cells
+- disintegration particle system at hit
+- pause menue?
+- use of nice enemy assets:
+    - add custom models and animation for Moorhuhn and/or crazy chicken
+    - rng cock for extra points
+    - scarecrow for some more extra points
+    - classic windmill?
+    - castle
+- HTML5 export
+    - https://github.com/UnrealEngineHTML5/UnrealEngine/tree/4.24.3-html5-1.39.18/Engine/Platforms/HTML5
+    - https://github.com/UnrealEngineHTML5/Documentation/blob/master/Platforms/HTML5/HowTo/README.md
+
+
+## WTF? why is this shit not workin?
+- Highscores: AddListViewItem; seems to add elements, get oer methodm using space, but does not show (maybe invisible or wrong z-order?)
+- setting values for game mode (GameRunning): allowed, gets called, but does not change the value? (maybe a reset or another instance?)
+- Lightning seems to do anything but behaving correctly as set
