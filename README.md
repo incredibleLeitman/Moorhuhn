@@ -42,7 +42,7 @@ Moorhuhn remake in UE4, students project for @fh-technikum-wien
 ## WTF? why is this shit not workin?
 - Highscores: AddListViewItem; seems to add elements, get oer methodm using space, but does not show (maybe invisible or wrong z-order?)
 - setting values for game mode (GameRunning): allowed, gets called, but does not change the value? (maybe a reset or another instance?)
-- Lightning seems to do anything but not behave correctly as set
+- Lightning seems to do anything but behaving correctly as set
 
 
 ## Fullfilled requirements and Features
@@ -52,40 +52,40 @@ Moorhuhn remake in UE4, students project for @fh-technikum-wien
     uses a hitscan at the current mouse cursor poisition to detect hit
 
 - AI-controlled pawns/characters
-    Moorhühner are spawned from EnemySpawner, controlled by AI-Controller;
-    Behavior Trees are not applicable thus every Enemy has a set of movement patterns
+    - Moorhühner are spawned from EnemySpawner, controlled by AI-Controller;
+    - Behavior Trees are not applicable thus every Enemy has a set of movement patterns
 
 - Map/level
-    o Menue Sytem: Main menue connected to highscores and level
-    o Main level: floating rock in a 3D environment; charactes is spawned within a not passable area where movement is allowed;
+    - Menue system: main menue connected to highscores and level
+    - Main level: floating rock in a 3D environment; charactes is spawned within a not passable area where movement is allowed;
       Usage of Sky Sphere and Light for global illumination and mood; extra directional lights setup to illuminate player area and map;
       Contains a FPS HUD which displays remaining time, ammunition and scored points realised with UMG; Draw custom crosshair including hit marker;
       Also implemented a screenshake after each shot and a restriction for spamming
 
 - Custom models and materials
-    use of different materials for background environment; player character weapon and enemies;
-    because animation for custom Moorhuhn didn't work, walking animation for starter package Mannequin was used
+    - use of different materials for background environment; player character weapon and enemies;
+    - because animation for custom Moorhuhn didn't work, walking animation for starter package Mannequin was used
 
 - Used external content
-    o Particle system for muzzle flash from Sci-fi Gun Pack by Quaternius
-    o Particle system for explosions at enemy hit from UE4 infiltrator Demo
-    o Environment such as mountains, plateaus, trees and billboards from UE4 infiltrator demo
-    o Moorhuhn created by Marlene (https://twitter.com/Merlar98)
-    o Crazy chicken created by Jorge Rodrigues (https://www.artstation.com/artwork/4bdZz8)
-    o sounds and music mostly from original moorhuhn game (https://store.steampowered.com/app/340120/Moorhuhn_Crazy_Chicken/?l=german)
+    - Particle system for muzzle flash from Sci-fi Gun Pack by Quaternius
+    - Particle system for explosions at enemy hit from UE4 infiltrator Demo
+    - Environment such as mountains, plateaus, trees and billboards from UE4 infiltrator demo
+    - Moorhuhn created by Marlene (https://twitter.com/Merlar98)
+    - Crazy chicken created by Jorge Rodrigues (https://www.artstation.com/artwork/4bdZz8)
+    - sounds and music mostly from original moorhuhn game (https://store.steampowered.com/app/340120/Moorhuhn_Crazy_Chicken/?l=german)
         additional sounds from weloveindies.com using student licence
-    o Moorhuhn remastered menue background image
+    - Moorhuhn remastered menue background image
 
 - Realization of logic through blueprints
-    o BP_GameMode for gameloop
-    o BP_FPS_Character implements game mechanics
-    o BP_Camera Shake so add firing feedback
-    o BP_Moorhuhn reacts to hits, plays animations and sounds; destroy itself
-    o BP_Moorhuhn_back (not used anymore) was the Enemy implementation with starter content mesh and animation
-    o BP_AI_Controller move the enemies depending on mode through the level
+    - BP_GameMode for gameloop
+    - BP_FPS_Character implements game mechanics
+    - BP_Camera Shake so add firing feedback
+    - BP_Moorhuhn reacts to hits, plays animations and sounds; destroy itself
+    - BP_Moorhuhn_back (not used anymore) was the Enemy implementation with starter content mesh and animation
+    - BP_AI_Controller move the enemies depending on mode through the level
         split different behavior in seperate functions
-    o BP_Enemy Spawner periodically creates new enemies
-    o BP_Save Game struct to hold gamestate
+    - BP_Enemy Spawner periodically creates new enemies
+    - BP_Save Game struct to hold gamestate
 
 - C++ integration
     Helper class for sorting as key-value pairs to show in highscores
@@ -101,14 +101,14 @@ Moorhuhn remake in UE4, students project for @fh-technikum-wien
 
 
 - references
-    o assets stores
+    - assets stores
         - http://shootertutorial.com/assets-stores-links/
         - https://www.cgtrader.com/
-    o animation creator from meshes
+    - animation creator from meshes
         - https://www.mixamo.com/#/
         - retarget Mixamo animation to UE4 https://www.youtube.com/watch?v=UoGdTouVeRs&ab_channel=CARD00R
-    o Godot Moorhuhn clone implementation https://talesfromimdahl.de/2019/04/04/how-to-part-2/
-    o Disintegration effect
+    - Godot Moorhuhn clone implementation https://talesfromimdahl.de/2019/04/04/how-to-part-2/
+    - Disintegration effect
         - https://www.youtube.com/watch?v=gldIJGqlWf0&ab_channel=UnrealCG
         - https://www.youtube.com/watch?v=D4bXMDFPcWQ&ab_channel=UnrealCG
         - http://martiancraft.com/blog/2015/02/disintegrating-baddies/
