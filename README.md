@@ -1,2 +1,167 @@
 # Moorhuhn
 Moorhuhn remake in UE4, students project for @fh-technikum-wien
+
+
+
+
+## Done
+
+- basic menue
+- sceen shake
+- basic ammo system and reload
+- timer
+- score system
+- actual moving enemies
+- spawner and behavior
+- stop / remove game(mode)/map? to prevent further EventTicks? --> set bool @finish -> load level resets state
+- music and sound
+    - menue button
+    - bg music
+    - countdown
+    - hit + death scream
+- sort highscores and mark last game (TODO: fix ListView addItem)
+- level mesh
+
+
+## improvements
+
+- "correctly" close map and open score entry
+- enter name after play (currently random playertag)
+- add random encounter for more points
+- animate shoot and reload system by showing cells
+- disintegration particle system at hit
+- pause menue?
+- use of nice enemy assets:
+    - add custom models and animation for Moorhuhn and/or crazy chicken
+    - rng cock for extra points
+    - scarecrow for some more extra points
+    - classic windmill?
+    - castle
+
+
+## WTF? why is this shit not workin?
+- Highscores: AddListViewItem; seems to add elements, get oer methodm using space, but does not show (maybe invisible or wrong z-order?)
+- setting values for game mode (GameRunning): allowed, gets called, but does not change the value? (maybe a reset or another instance?)
+- Lightning seems to do anything but not behave correctly as set
+
+
+## Fullfilled requirements and Features
+
+- User-controllable character
+    standard FPS character, WASD movement + space to jump, mouse controlled crosshair: left click to shoot, right click to reload
+    uses a hitscan at the current mouse cursor poisition to detect hit
+
+- AI-controlled pawns/characters
+    Moorhühner are spawned from EnemySpawner, controlled by AI-Controller;
+    Behavior Trees are not applicable thus every Enemy has a set of movement patterns
+
+- Map/level
+    o Menue Sytem: Main menue connected to highscores and level
+    o Main level: floating rock in a 3D environment; charactes is spawned within a not passable area where movement is allowed;
+      Usage of Sky Sphere and Light for global illumination and mood; extra directional lights setup to illuminate player area and map;
+      Contains a FPS HUD which displays remaining time, ammunition and scored points realised with UMG; Draw custom crosshair including hit marker;
+      Also implemented a screenshake after each shot and a restriction for spamming
+
+- Custom models and materials
+    use of different materials for background environment; player character weapon and enemies;
+    because animation for custom Moorhuhn didn't work, walking animation for starter package Mannequin was used
+
+- Used external content
+    o Particle system for muzzle flash from Sci-fi Gun Pack by Quaternius
+    o Particle system for explosions at enemy hit from UE4 infiltrator Demo
+    o Environment such as mountains, plateaus, trees and billboards from UE4 infiltrator demo
+    o Moorhuhn created by Marlene (https://twitter.com/Merlar98)
+    o Crazy chicken created by Jorge Rodrigues (https://www.artstation.com/artwork/4bdZz8)
+    o sounds and music mostly from original moorhuhn game (https://store.steampowered.com/app/340120/Moorhuhn_Crazy_Chicken/?l=german)
+        additional sounds from weloveindies.com using student licence
+    o Moorhuhn remastered menue background image
+
+- Realization of logic through blueprints
+    o BP_GameMode for gameloop
+    o BP_FPS_Character implements game mechanics
+    o BP_Camera Shake so add firing feedback
+    o BP_Moorhuhn reacts to hits, plays animations and sounds; destroy itself
+    o BP_Moorhuhn_back (not used anymore) was the Enemy implementation with starter content mesh and animation
+    o BP_AI_Controller move the enemies depending on mode through the level
+        split different behavior in seperate functions
+    o BP_Enemy Spawner periodically creates new enemies
+    o BP_Save Game struct to hold gamestate
+
+- C++ integration
+    Helper class for sorting as key-value pairs to show in highscores
+
+- Music and Sound Effects
+    o Different ambient sounds for menue and level
+    o sound effects in level for shooting and reloading, as well as enemy hit and countdown
+    o menue sounds for button clicks
+
+- Saving and loading game data
+    Because ingame save slots did not fit well into the game, the GameSate saving system was used
+    to store and load highscores
+
+
+- references
+    o assets stores
+        - http://shootertutorial.com/assets-stores-links/
+        - https://www.cgtrader.com/
+    o animation creator from meshes
+        - https://www.mixamo.com/#/
+        - retarget Mixamo animation to UE4 https://www.youtube.com/watch?v=UoGdTouVeRs&ab_channel=CARD00R
+    o Godot Moorhuhn clone implementation https://talesfromimdahl.de/2019/04/04/how-to-part-2/
+    o Disintegration effect
+        - https://www.youtube.com/watch?v=gldIJGqlWf0&ab_channel=UnrealCG
+        - https://www.youtube.com/watch?v=D4bXMDFPcWQ&ab_channel=UnrealCG
+        - http://martiancraft.com/blog/2015/02/disintegrating-baddies/
+
+
+## Requirements
+
+For this course earch student has to design and develop a small project in UE4. These projects do not necessarily have to be full-featured games, but have to demonstrate the student's ability to use certain aspects of the Unreal Engine in order to create fully functional games.
+
+For his or her project a student can earn up to 106 points in total.
+The following is a list of topics that have to be covered in the student project:
+
+- Usage of UE4 framework, game modes/states, actors and pawns/characters (10 points)
+    - User-controllable pawn or character
+    - AI-controlled actors/pawns/characters 
+- Design and creation of maps/levels (10 points)
+    - BSP Brushes
+    - Lightning
+- Creation and usage of custom materials (10 points)
+- Artificial Intelligence controllers for NPCs/enemies, Behavior Trees (10 points)
+- Use of UMG UI Desiger (10 points)
+    - Player HUD
+    - Game Menu
+- Character animations (10 points)
+    - State Machine with manuel transitions
+    - Blend Mode
+- Some external content used from either marketplace, Internet, self-made (5 points)
+- Correct and reasonable usage of Blueprint, for actors, levels, controllers, events (20 points)
+    - Use of functions/macros/variables 
+- Correct and reasonable usage of C++, for actors, components, events (10 points)
+
+Additionally, some more points can be earned by adding these things to the project:
+
+- Playing background music, using sound effects (5 points)
+- Creating and using different particle systems (5 points)
+- Saving and loading game data (5 points)
+- Data-driven elements (2 points)
+- Various post-processing components (2 points)
+
+
+Based on the total available points the project is assessed using the official FHTW scheme:
+
+```
+             < 50%    Nicht genügend
+>= 50%  und  < 63%    Genügend
+>= 63%  und  < 75%    Befriedigend
+>= 75%  und  < 88%    Gut
+>= 88%                Sehr Gut
+```
+
+Note that copying content from the project we worked on in the lab or from Epic Games sample projects is not enough.
+For a good mark you need to create your own content!
+
+Also note that external plugins (incl. plugins from the UE4 marketplace) as well as VR games are not allowed!
+
+A technical documentation that fully describes which of the aforementioned topics have been implemented and in which way, including a summary and overview on the whole project, is mandatory. This documentation has to describe where / in which assets in your project the requirements listed above can be found, and how you have implemented them. Without such a documentation your project won't be marked = fail!
