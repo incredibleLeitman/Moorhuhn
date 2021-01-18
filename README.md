@@ -3,6 +3,8 @@ Moorhuhn remake in UE4, students project for @fh-technikum-wien in GEE (game eng
 
 ![Moorhuhn Remake Title](https://github.com/incredibleLeitman/Moorhuhn/blob/main/screenshot.png "Moorhuhn Remake Title")
 
+Download the latest version from dropbox:
+https://www.dropbox.com/sh/9t0uqydfu9au076/AAAJ5DATTH-B6DjcTlfHbkWZa?dl=0
 
 ## Fullfilled requirements and features
 
