@@ -52,9 +52,9 @@ https://www.dropbox.com/sh/9t0uqydfu9au076/AAAJ5DATTH-B6DjcTlfHbkWZa?dl=0
     Helper class for sorting as key-value pairs to show in highscores
 
 - Music and Sound Effects
-    o Different ambient sounds for menue and level
-    o sound effects in level for shooting and reloading, as well as enemy hit and countdown
-    o menue sounds for button clicks
+    - Different ambient sounds for menue and level
+    - sound effects in level for shooting and reloading, as well as enemy hit and countdown
+    - menue sounds for button clicks
 
 - Saving and loading game data
     Because ingame save slots did not fit well into the game, the GameSate saving system was used
@@ -64,7 +64,7 @@ https://www.dropbox.com/sh/9t0uqydfu9au076/AAAJ5DATTH-B6DjcTlfHbkWZa?dl=0
 - references
     - assets stores
         - http://shootertutorial.com/assets-stores-links/
-    - animation creator from meshes
+    - animation creator from static meshes
         - https://www.mixamo.com/#/
         - retarget Mixamo animation to UE4 https://www.youtube.com/watch?v=UoGdTouVeRs&ab_channel=CARD00R
     - Godot Moorhuhn clone implementation
@@ -168,6 +168,6 @@ A technical documentation that fully describes which of the aforementioned topic
 
 
 ## WTF? why is this shit not workin?
-- Highscores: AddListViewItem; seems to add elements, get oer methodm using space, but does not show (maybe invisible or wrong z-order?)
+- Highscores: AddListViewItem; seems to add elements, get per method using space, but does not show anything (maybe invisible or wrong z-order?)
 - setting values for game mode (GameRunning): allowed, gets called, but does not change the value? (maybe a reset or another instance?)
 - Lightning seems to do anything but behaving correctly as set
