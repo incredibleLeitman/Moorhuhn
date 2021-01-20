@@ -158,6 +158,8 @@ A technical documentation that fully describes which of the aforementioned topic
 - disintegration particle system at hit
 - pause menue?
 - weapon recoil
+- combo points for re-hits
+- show points at hit
 - day-night cycle
 - use of nice enemy assets:
     - add custom models and animation for Moorhuhn and/or crazy chicken
