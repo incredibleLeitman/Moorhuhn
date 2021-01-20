@@ -4,6 +4,7 @@ Moorhuhn remake in UE4, students project for @fh-technikum-wien in GEE (game eng
 ![Moorhuhn Remake Title](https://github.com/incredibleLeitman/Moorhuhn/blob/main/screenshot.png "Moorhuhn Remake Title")
 
 Download the latest version from dropbox:
+
 https://www.dropbox.com/sh/9t0uqydfu9au076/AAAJ5DATTH-B6DjcTlfHbkWZa?dl=0
 
 ## Fullfilled requirements and features
@@ -167,7 +168,7 @@ A technical documentation that fully describes which of the aforementioned topic
     - https://github.com/UnrealEngineHTML5/Documentation/blob/master/Platforms/HTML5/HowTo/README.md
 
 
-## WTF? why is this shit not workin?
+## open issues
 - Highscores: AddListViewItem; seems to add elements, get per method using space, but does not show anything (maybe invisible or wrong z-order?)
 - setting values for game mode (GameRunning): allowed, gets called, but does not change the value? (maybe a reset or another instance?)
 - Lightning seems to do anything but behaving correctly as set
