@@ -157,6 +157,7 @@ A technical documentation that fully describes which of the aforementioned topic
 - animate shoot and reload system by showing cells
 - disintegration particle system at hit
 - pause menue?
+- weapon recoil
 - day-night cycle
 - use of nice enemy assets:
     - add custom models and animation for Moorhuhn and/or crazy chicken
