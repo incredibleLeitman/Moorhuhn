@@ -3,7 +3,7 @@
 
 #include "Helpers.h"
 
-TMap<FString, int32>  UHelpers::SortTopScores(TMap<FString, int32> scores, int32 amount)
+TMap<FString, int32> UHelpers::SortTopScores(TMap<FString, int32> scores, int32 amount)
 {
     scores.ValueSort([](const int lhs, const int rhs) { return lhs > rhs; });
 
