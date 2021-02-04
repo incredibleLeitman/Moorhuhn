@@ -17,7 +17,7 @@ Reload is only possible if at least on bullet was shot, while reloading, shootin
 
 The player has 90 seconds to shoot targets and receive points, which are displayed in the highscore list.
 
-Hitting enemies in the frontline is rewarded with 25 points, enemies that are far with 35 points. It is possible to hit a targe multiple times for additional points.
+Hitting enemies in the frontline is rewarded with 25 points, enemies that are far with 50 points. It is possible to hit a targe multiple times for additional combo points.
 
 
 # Dev Area
@@ -39,6 +39,8 @@ Hitting enemies in the frontline is rewarded with 25 points, enemies that are fa
     - hit + death scream
 - sort highscores and mark last game (TODO: fix ListView addItem)
 - level mesh
+- combo points for re-hits
+- show points at hit
 
 
 ## improvements
@@ -50,8 +52,6 @@ Hitting enemies in the frontline is rewarded with 25 points, enemies that are fa
 - disintegration particle system at hit
 - pause menue?
 - weapon recoil
-- combo points for re-hits
-- show points at hit
 - day-night cycle
 - use of nice enemy assets:
     - add custom models and animation for Moorhuhn and/or crazy chicken
